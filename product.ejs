@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Product List</h1>
+    <table border="1" width="100%">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Category Name</th>
+            <th>Category ID</th>
+            <th>Actions</th>
+        </tr>
+        <% if(product.length> 0){ %>
+            <% for(var i=0;i<product.length;i++){ %>
+                <tr>
+                    <td>
+                        <%- product[i].productId %>
+                    </td>
+                    <td>
+                        <%- product[i].productName %>
+                    </td>
+                    <td>
+                        <%- product[i].categoryName %>
+                    </td>
+                    <td>
+                        <%- product[i].categoryId %>
+                    </td>
+                    <td><a href="/delete-product?productId=<%- product[i].productId %>">Delete</a>
+                        <a href="/update-product?productId=<%- product[i].productId %>">Update</a>
+                    </td>
+                </tr>
+
+                <% } %>
+                    <% }else{ %>
+                        <h1>Data Not Found</h1>
+
+                        <% } %>
+    </table>
+</body>
+
+</html>

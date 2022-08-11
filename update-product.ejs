@@ -1,0 +1,9 @@
+<h1>Update Product</h1>
+<form action="" method="POST">
+    <input type="hidden" value="<%- product[0].id %> " name="id" placeholder="ID"><br>
+    Product ID:  <input type="number" value="<%= product[0].productId %> " name="productId" placeholder="Product ID"><br>
+    Product Name:  <input type="text" value="<%= product[0].productName %> " name="productName" placeholder="Product Name"><br>
+    Category Name:  <input type="text" value="<%= product[0].categoryName %> " name="categoryName" placeholder="Category Name"><br>
+    Category ID:  <input type="number" value="<%= product[0].categoryId %> " name="categoryId" placeholder="Category ID"><br>
+    <input type="submit" value="Submit">
+</form>
