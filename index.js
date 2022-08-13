@@ -31,8 +31,9 @@ app.post('/', (req, res) => {
 
     con.query(sql, [values], (error, result) => {
         if (error) throw error;
+        res.redirect('/product');
         // console.log(result);
-        res.send("Registration successfull " + productId);
+        //res.send("Registration successfull " + productId);
     });
 });
 
